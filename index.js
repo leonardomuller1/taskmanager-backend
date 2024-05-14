@@ -57,7 +57,7 @@ app.patch("/tasks/:id", async (req, res) => {
 
         for (const update of requestedUpdates) {
             if (allowedUpdates.includes(update)) {
-                taskToUpdate[update] = taskData[update];
+                taskToUpdate[update] = taskData;
             } else {
                 res.status(500).send("Um ou mais campos não são editáveis");
             }
