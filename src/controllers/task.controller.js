@@ -29,7 +29,7 @@ class TaskController {
         }
     }
 
-    async post() {
+    async create() {
         try {
             const newTask = new TaskModel(this.req.body);
 
@@ -41,7 +41,7 @@ class TaskController {
         }
     }
 
-    async patch() {
+    async update() {
         try {
             const taskId = this.req.params.id;
             const taskData = this.req.body;
