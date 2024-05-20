@@ -38,7 +38,7 @@ class TaskController {
         }
     }
 
-    async post() {
+    async create() {
         try {
             const newTask = new TaskModel(this.req.body);
 
